@@ -6,9 +6,24 @@ This is a simple demo project that shows how to deploy a Node.js app connected t
 
 ## 📁 Project Structure
 
-k8s-node-app/ │ ├── app/ # Node.js application │ ├── Dockerfile # Dockerfile for building the app image │ ├── index.js # Entry point for the app │ ├── package.json # Node dependencies │ └── package-lock.json │ ├── k8s/ # Kubernetes manifest files │ ├── app-deployment.yaml # Deployment for Node.js app │ ├── app.service.yaml # Service to expose Node.js app │ ├── mongo-deployment.yaml # Deployment for MongoDB │ └── mongo-service.yaml # Service for MongoDB │ ├── README.md # You're reading it 🙂 └── package-lock.json
-
----
+```
+k8s-node-app/
+│
+├── app/                # Node.js application
+│   ├── Dockerfile      # Dockerfile for building the app image
+│   ├── index.js        # Entry point for the app
+│   ├── package.json    # Node dependencies
+│   └── package-lock.json
+│
+├── k8s/                # Kubernetes manifest files
+│   ├── app-deployment.yaml  # Deployment for Node.js app
+│   ├── app.service.yaml     # Service to expose Node.js app
+│   ├── mongo-deployment.yaml # Deployment for MongoDB
+│   └── mongo-service.yaml   # Service for MongoDB
+│
+├── README.md           # You're reading it 🙂
+└── package-lock.json
+```
 
 ## 🚀 Getting Started
 
@@ -64,32 +79,28 @@ k8s-node-app/ │ ├── app/ # Node.js application │ ├── Dockerfile 
 
 Once deployed and running, you can test endpoints like:
 
-GET / — Welcome route
-GET /data — Sample MongoDB data fetch
-POST /data — Add data to MongoDB
+- GET / — Welcome route
+- GET /data — Sample MongoDB data fetch
+- POST /data — Add data to MongoDB
 
 You can test using Postman, cURL, or a browser.
 
 ## 🧠 What You Learn 
 
-Dockerizing a Node.js app
-Creating Kubernetes Deployments & Services
-Connecting services inside a cluster (Node app ↔ MongoDB)
-Structuring real-world YAMLs and resources
+- Dockerizing a Node.js app
+- Creating Kubernetes Deployments & Services
+- Connecting services inside a cluster (Node app ↔ MongoDB)
+- Structuring real-world YAMLs and resources
 
 ## 💡 Tips
 
-Pods talk via Services
-MongoDB should be accessed through the service name (e.g., mongodb-service)
-Use kubectl describe to debug resources
+- Pods talk via Services
+- MongoDB should be accessed through the service name (e.g., mongodb-service)
+- Use kubectl describe to debug resources
 
-## 🛠 Commands Quick Recap 
+## 🙌 Credits 
+Inspired by Kubernetes learning resources and walkkthroughs like Kunal Kushwaha's Kubernetes 
+series
 
-  ```bash
-  # Add and commit
-  git add .
-  git commit -m "Initial commit with K8s manifests and Node app"
-  git branch -M main
-  git remote add origin https://github.com/YOUR_USERNAME/k8s-nodejs-mongodb-demo.git
-  git push -u origin main .
-
+## 📝 License 
+MIT 
